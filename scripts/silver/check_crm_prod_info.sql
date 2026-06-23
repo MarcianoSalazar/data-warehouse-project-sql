@@ -10,11 +10,11 @@ HAVING COUNT(*) != 1 OR prd_id IS NULL
 
 -- Check unwanted spaces 
 -- Expectation: No Result
-
 SELECT prd_nm
 FROM bronze.crm_prd_info
 WHERE prd_nm != TRIM(prd_nm)
 
+	
 -- Check for Nulls Or Negative Nums
 -- Expectation: No Result
 SELECT 
@@ -28,9 +28,10 @@ SELECT DISTINCT prd_line FROM bronze.crm_prd_info
 
 
 -- Check for Invalid Date Orders
+-- Expectation: No Result
 SELECT *
 FROM bronze.crm_prd_info
 WHERE prd_start_dt > prd_end_dt	
 
-
+-- Check overall data
 SELECT * FROM silver.crm_prd_info
