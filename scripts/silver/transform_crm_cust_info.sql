@@ -28,7 +28,7 @@ FROM (
 	ROW_NUMBER() OVER (PARTITION BY cst_id ORDER BY cst_create_date DESC) AS flag_last -- Remove the duplicates
 	FROM bronze.crm_cust_info
 	WHERE cst_id IS NOT NULL
-)t WHERE flag_last = 1 -- Select the most recent record per customer	
+)t WHERE flag_last = 1; -- Select the most recent record per customer	
 
 
 
