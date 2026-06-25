@@ -120,5 +120,3 @@ Deliver SQL-based analytics to provide insights into:
 - 💻 [SSMS — Free Download](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
 
 ---
-
-*Built by a Junior Data Engineer following the DataWithBaraa curriculum. 🚀*
